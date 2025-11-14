@@ -1,16 +1,20 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: NOTA ENTRE 0 E 10
-    Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
+    Faça um programa que peça uma nota, entre zero e dez. 
+    Mostre uma mensagem caso o valor seja inválido e continue 
+    pedindo até que o usuário informe um valor válido.
     */
 
-    //ENTRADA
+  //ENTRADA
+  let nota = Number(prompt(`Escreva um valor entre(0-10)`));
+  while (nota > 10 || nota < 0) {
+    alert(`Valor Inválido`);
+    nota = Number(prompt(`Escreva um valor entre(0-10)`));
+  }
 
+  //PROCESSAMENTO
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+  //SAÍDA
 </script>

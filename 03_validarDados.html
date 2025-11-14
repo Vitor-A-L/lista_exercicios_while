@@ -1,6 +1,6 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: VALIDAR DADOS DO USUÁRIO
     Faça um programa que leia e valide as seguintes informações:
     Nome: maior que 3 caracteres;
@@ -10,12 +10,32 @@
     Estado Civil: 's', 'c', 'v', 'd';
     */
 
-    //ENTRADA
+  //ENTRADA
+  let name = prompt(`Insira seu nome`);
+  let age = Number(prompt(`Insira sua idade`));
+  let mone = Number(prompt(`Insira seu salário`));
+  let sex = prompt(`Informe seu Sex(F-M)`);
+  let civil = prompt(`Infome seu estado civil:(s,c,v,d)`);
 
+  //PROCESSAMENTO
+  while (
+    name.length < 3 ||
+    (age < 0 &&
+    age > 150) ||
+    mone < 0 ||
+    (sex !== "f" &&
+    sex !== "m") ||
+    (civil !== "s" &&civil !== "c" &&
+    civil !== "v" &&
+    civil !== "d")
+  ) {
+    alert(`Existe um valor inváldo`);
+    name = prompt(`Insira seu nome`);
+    age = Number(`Insira sua idade`);
+    mone = Number(prompt(`Insira seu salário`));
+    sex = prompt(`Informe seu Sex(F-M)`);
+    civil = prompt(`Infome seu estado civil:(s,c,v,d)`);
+  }
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+  //SAÍDA
 </script>

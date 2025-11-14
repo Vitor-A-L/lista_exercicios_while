@@ -1,16 +1,20 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
-    PROBLEMA: VALIDAR SENHA
-    Faça um programa que receba uma senha formada de quatro números inteiros, verifique se a senha está correta e, caso não esteja, solicite novamente a senha. Se a senha entrada for a correta, deverá ser apresentada a mensagem “Senha Correta”, caso contrário, “Senha Incorreta”.
-    */
+      /*
+      PROBLEMA: VALIDAR SENHA
+      Faça um programa que receba uma senha formada de quatro números inteiros, verifique se a senha está correta e,
+      caso não esteja, solicite novamente a senha. Se a senha entrada for a correta, deverá ser apresentada a mensagem
+      “Senha Correta”, caso contrário, “Senha Incorreta”.
+      */
 
-    //ENTRADA
+      //ENTRADA
+  let password = prompt(`Escreva uma senha de 4 digitos`);
 
+      //PROCESSAMENTO
+  while(password.length!==4||password.isInteger){
+  alert(`Valor inválido`);
+  password = prompt(`senha inválida de 4 digitos`);
+  }
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+      //SAÍDA
 </script>
