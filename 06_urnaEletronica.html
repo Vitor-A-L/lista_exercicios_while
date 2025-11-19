@@ -35,9 +35,8 @@
       Entre com o seu voto:`)
   );
 
-  while (candidatos > 5 || candidatos < 0||total<votantes) {
-    total++
-    candidatos = Number(
+  while (total < votantes) {
+    let candidatos = Number(
       prompt(`As opções são:
       1. Candidato Joãozinho
       2. Candidato Mariazinha
@@ -47,29 +46,32 @@
     );
     if (candidatos == 1) {
       cad1++;
+      total++;
     } else if (candidatos == 2) {
       cad2++;
+      total++;
     } else if (candidatos == 3) {
       cad3++;
+      total++;
     } else if (candidatos == 4) {
       cad4++;
+      total++;
     } else if (candidatos == 0) {
-        document.write(`O candidato 1 teve ${cad1} votos <br> O candidato 2 teve ${cad2} votos <br> O candidato 3 teve ${cad3} teve <br> O candidato 4 teve ${cad4}`)
-        document.write(`A quantidade de votos nulos foi ${cad4/total} <br>`);
-        document.write(`A quantidade de votos brancos foi ${cad3/total}`) 
+  document.write(`O candidato 1 teve ${cad1} votos <br>`)
+  document.write(`O candidato 2 teve ${cad2} votos <br>`)
+  document.write(`O candidato 3 teve ${cad3} votos <br>`)
+  document.write(`O candidato 4 teve ${cad4} votos <br>`)
+      document.write(`A quantidade de votos nulos foi ${(cad3 / total*100)} <br>`);
+      document.write(`A quantidade de votos brancos foi ${(cad4 / total&100)} <br>`);
     }
-     
   }
-  if(cad1>cad2||cad1>cad3||cad1>cad4){
-        document.write(`O VENCEDOR FOI ${cad1}`);
-    }else if(cad2>cad1||cad2>cad3||cad2>cad4){
-        document.write(`O VENCEDOR FOI ${cad2}`);
-    }else if(cad3>cad1||cad3>cad2||cad3>cad4){
-        document.write(`O VENCEDOR FOI ${cad3}`);
-    }else if(cad4>cad1||cad4>cad2||cad4>cad3){
-        document.write(`O VENCEDOR FOI ${cad4}`);
-    }
- 
+if (cad1 > cad2) {
+  document.write(`O VENCEDOR foi Candidato Joãozinho`);
+} else if (cad2 > cad1) {
+  document.write(`O VENCEDOR foi Candidato Mariazinha`);
+} else {
+  document.write(`Houve empate entre os candidatos.`);
+}
 
   //SAÍDA
 </script>

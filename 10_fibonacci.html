@@ -1,3 +1,5 @@
+
+<meta charset="UTF-8">
 <script>
     //Problema: Fibonacci
     /*
@@ -5,10 +7,19 @@
     */
 
     //ENTRADA
-
-
+let fibo = Number(prompt(`Quantos número da sequê de Fibonacci você quer?`));
+let num1 = 0;
+let num2 = 1;
+let contador = 0;
     //PROCESSAMENTO
 
+while(contador<fibo){
+    let next = num1+num2;
+    alert(next);
+    num1 = num2;
+    num2 = next;
+    contador++;
+}
 
     //SAÍDA
     

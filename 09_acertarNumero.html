@@ -5,7 +5,22 @@
     */
 
     //ENTRADA
+let valor = Math.floor(Math.random() * 30) + 1;
+let num = Number(prompt(`informe o numero que você quer chutar`));
 
+    //PROCESSAMENTO
+while(valor !== num){
+if(valor > num){
+    alert(`o numero é maior que ${num}`)
+}else if(valor < num){
+alert(`o numero é menor que ${num}`)
+}
+num = Number(prompt(`informe o numero que você quer chutar`));
+}
+
+
+
+    alert(`parabéns, você acertou`)
 
     //PROCESSAMENTO
 
